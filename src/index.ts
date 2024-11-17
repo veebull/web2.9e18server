@@ -52,6 +52,7 @@ app.use(
       'https://5511-212-22-74-249.ngrok-free.app',
       'http://127.0.0.1:4040',
       'https://rnzpf-178-214-255-153.a.free.pinggy.link',
+      'https://930b-178-214-255-153.ngrok-free.app/',
     ],
     methods: ['GET', 'POST'],
     credentials: true,
