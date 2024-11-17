@@ -101,15 +101,17 @@ app.post('/create-invoice-link', async (req, res) => {
         provider_token: '',
         currency: 'XTR', // Changed from 'XTR' to 'USD' as XTR might not be supported
         prices: invoiceParams.prices,
-        max_tip_amount: invoiceParams.max_tip_amount || 0,
-        suggested_tip_amounts: invoiceParams.suggested_tip_amounts || [],
+        provider_data: JSON.stringify({ telegramId: 'private_provider_data' }),
         photo_url: invoiceParams.photo_url,
-        need_name: invoiceParams.need_name || false,
-        need_phone_number: invoiceParams.need_phone_number || false,
-        need_email: invoiceParams.need_email || false,
-        need_shipping_address: invoiceParams.need_shipping_address || false,
-        send_email_to_provider: invoiceParams.send_email_to_provider || false,
-        is_flexible: invoiceParams.is_flexible || false,
+
+        // max_tip_amount: invoiceParams.max_tip_amount || 0,
+        // suggested_tip_amounts: invoiceParams.suggested_tip_amounts || [],
+        // need_name: invoiceParams.need_name || false,
+        // need_phone_number: invoiceParams.need_phone_number || false,
+        // need_email: invoiceParams.need_email || false,
+        // need_shipping_address: invoiceParams.need_shipping_address || false,
+        // send_email_to_provider: invoiceParams.send_email_to_provider || false,
+        // is_flexible: invoiceParams.is_flexible || false,
       });
 
       console.log('Generated invoice link:', invoiceLink);
